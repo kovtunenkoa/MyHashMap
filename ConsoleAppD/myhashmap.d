@@ -77,14 +77,13 @@ class MyHashMap(K, V)
 	{
 		uint hashValue = hashFunction(key);
 		HashNode!(K,V) * entry = &table[hashValue];
-
 		while (entry != null)
 		{
 			if(entry.getKey() == key)
 			{
 				return entry.getValue();
 			}
-
+			entry = entry.getNext();
 		}
 		return 0;
 	}

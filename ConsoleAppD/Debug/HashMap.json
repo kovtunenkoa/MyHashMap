@@ -147,13 +147,13 @@
     "kind" : "function",
     "line" : 5,
     "deco" : "FZv",
-    "endline" : 9
+    "endline" : 17
    },
    {
-    "name" : "__unittestL10_1",
+    "name" : "__unittestL19_1",
     "kind" : "function",
-    "line" : 10,
-    "endline" : 30
+    "line" : 19,
+    "endline" : 39
    }
   ]
  },
@@ -260,12 +260,12 @@
           "type" : "K"
          }
         ],
-        "endline" : 90
+        "endline" : 89
        },
        {
         "name" : "hashFunction",
         "kind" : "function",
-        "line" : 92,
+        "line" : 91,
         "type" : "uint(K key)",
         "parameters" : [
          {
@@ -273,7 +273,7 @@
           "type" : "K"
          }
         ],
-        "endline" : 101
+        "endline" : 100
        }
       ]
      }
