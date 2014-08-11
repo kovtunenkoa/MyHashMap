@@ -1,0 +1,284 @@
+[
+ {
+  "name" : "hashnode",
+  "kind" : "module",
+  "file" : "hashnode.d",
+  "members" : [
+   {
+    "kind" : "template",
+    "line" : 5,
+    "name" : "HashNode",
+    "parameters" : [
+     {
+      "name" : "K",
+      "kind" : "type"
+     },
+     {
+      "name" : "V",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "HashNode",
+      "kind" : "struct",
+      "line" : 5,
+      "members" : [
+       {
+        "name" : "this",
+        "kind" : "constructor",
+        "line" : 8,
+        "type" : "(ref const K key, ref const V value)",
+        "parameters" : [
+         {
+          "name" : "key",
+          "type" : "K",
+          "storageClass" : [
+           "const",
+           "ref"
+          ]
+         },
+         {
+          "name" : "value",
+          "type" : "V",
+          "storageClass" : [
+           "const",
+           "ref"
+          ]
+         }
+        ],
+        "endline" : 13
+       },
+       {
+        "name" : "getKey",
+        "kind" : "function",
+        "line" : 14,
+        "type" : "const K()",
+        "endline" : 16
+       },
+       {
+        "name" : "getValue",
+        "kind" : "function",
+        "line" : 17,
+        "type" : "const V()",
+        "endline" : 19
+       },
+       {
+        "name" : "setValue",
+        "kind" : "function",
+        "line" : 20,
+        "type" : "void(V value)",
+        "parameters" : [
+         {
+          "name" : "value",
+          "type" : "V"
+         }
+        ],
+        "endline" : 22
+       },
+       {
+        "name" : "getNext",
+        "kind" : "function",
+        "line" : 23,
+        "type" : "HashNode*()",
+        "endline" : 25
+       },
+       {
+        "name" : "setNext",
+        "kind" : "function",
+        "line" : 26,
+        "type" : "void(HashNode* next)",
+        "parameters" : [
+         {
+          "name" : "next",
+          "type" : "HashNode*"
+         }
+        ],
+        "endline" : 28
+       },
+       {
+        "name" : "key",
+        "kind" : "variable",
+        "line" : 31,
+        "type" : "K"
+       },
+       {
+        "name" : "value",
+        "kind" : "variable",
+        "line" : 32,
+        "type" : "V"
+       },
+       {
+        "name" : "next",
+        "kind" : "variable",
+        "line" : 33,
+        "type" : "HashNode*"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "kind" : "module",
+  "file" : "main.d",
+  "members" : [
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 1,
+    "protection" : "private"
+   },
+   {
+    "name" : "hashnode",
+    "kind" : "import",
+    "line" : 2,
+    "protection" : "private"
+   },
+   {
+    "name" : "myhashmap",
+    "kind" : "import",
+    "line" : 3,
+    "protection" : "private"
+   },
+   {
+    "name" : "main",
+    "kind" : "function",
+    "line" : 5,
+    "deco" : "FZv",
+    "endline" : 9
+   },
+   {
+    "name" : "__unittestL10_1",
+    "kind" : "function",
+    "line" : 10,
+    "endline" : 30
+   }
+  ]
+ },
+ {
+  "name" : "myhashmap",
+  "kind" : "module",
+  "file" : "myhashmap.d",
+  "members" : [
+   {
+    "name" : "hashnode",
+    "kind" : "import",
+    "line" : 2,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 3,
+    "protection" : "private"
+   },
+   {
+    "kind" : "template",
+    "line" : 5,
+    "name" : "MyHashMap",
+    "parameters" : [
+     {
+      "name" : "K",
+      "kind" : "type"
+     },
+     {
+      "name" : "V",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "MyHashMap",
+      "kind" : "class",
+      "line" : 5,
+      "members" : [
+       {
+        "name" : "sizeTable",
+        "kind" : "variable",
+        "line" : 10,
+        "deco" : "k"
+       },
+       {
+        "name" : "table",
+        "kind" : "variable",
+        "line" : 11,
+        "type" : "HashNode!(K, V)[]"
+       },
+       {
+        "name" : "this",
+        "kind" : "constructor",
+        "line" : 14,
+        "type" : "(uint sizeTable)",
+        "parameters" : [
+         {
+          "name" : "sizeTable",
+          "deco" : "k"
+         }
+        ],
+        "endline" : 18
+       },
+       {
+        "name" : "~this",
+        "kind" : "destructor",
+        "line" : 20,
+        "endline" : 33
+       },
+       {
+        "name" : "Print",
+        "kind" : "function",
+        "line" : 35,
+        "type" : "void()",
+        "endline" : 38
+       },
+       {
+        "name" : "setValueForKey",
+        "kind" : "function",
+        "line" : 41,
+        "type" : "void(K key, V value)",
+        "parameters" : [
+         {
+          "name" : "key",
+          "type" : "K"
+         },
+         {
+          "name" : "value",
+          "type" : "V"
+         }
+        ],
+        "endline" : 73
+       },
+       {
+        "name" : "valueForKey",
+        "kind" : "function",
+        "line" : 76,
+        "type" : "V(K key)",
+        "parameters" : [
+         {
+          "name" : "key",
+          "type" : "K"
+         }
+        ],
+        "endline" : 90
+       },
+       {
+        "name" : "hashFunction",
+        "kind" : "function",
+        "line" : 92,
+        "type" : "uint(K key)",
+        "parameters" : [
+         {
+          "name" : "key",
+          "type" : "K"
+         }
+        ],
+        "endline" : 101
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]
